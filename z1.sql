@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-03-2015 a las 02:54:33
+-- Tiempo de generación: 24-03-2015 a las 03:25:42
 -- Versión del servidor: 5.5.27
 -- Versión de PHP: 5.4.7
 
@@ -40,8 +40,6 @@ CREATE TABLE IF NOT EXISTS `cliente` (
 --
 
 INSERT INTO `cliente` (`idCliente`, `nombre`, `email`, `usuario_idUsuario`) VALUES
-(1, 'Francisco', 'franciscorenef@gmail.com', 0),
-(2, 'Matias', 'mastias@gmail.com', 0),
 (3, 'nombre3', 'email3@gmail.com', 3),
 (4, 'nombre4', 'email4@gmail.com', 4),
 (5, 'nombre5', 'email5@gmail.com', 5),
