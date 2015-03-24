@@ -1,0 +1,10 @@
+<?php
+$auth = Zend_Auth::getInstance();
+if ($auth->hasIdentity()) {
+    // Identity exists; get it
+    // $identity = $auth->getIdentity();
+    echo $auth->getIdentity()->idUsuario;
+}else
+echo 'no identificado';
+$this->form->setAction($this->url());
+echo $this->form;

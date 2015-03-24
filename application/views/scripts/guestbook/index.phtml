@@ -1,0 +1,49 @@
+<p><a href="<?php echo $this->url(
+    array(
+        'controller' => 'guestbook',
+        'action'     => 'sign'
+    ),
+    'default',
+    true) ?>">Sign Our Guestbook</a></p>
+ 
+Guestbook Entries: <br />
+<?php 
+    echo count($this->entries) .' comentarios'.'<br>';
+    echo $this->entries[0]['email'];
+?>
+
+<!--     <?php foreach ($this->entries as $entry): ?>
+    <td>
+        <tr><?php echo $this->escape($entry->email) ?></tr>
+        <tr><?php echo $this->escape($entry->comment) ?></tr>
+    </td>
+    
+    <?php endforeach ?> -->
+<table>
+       <tr>
+        <th>posición</th>
+        <th>id</th>
+        <th>email</th>
+        <th>comentario</th>
+        <th>usuario</th>
+       </tr>
+
+    <?php
+
+       for ($i=0; $i < count($this->entries); $i++) { ?>
+        <tr>
+            <td><?php echo $i. '- '; ?></td>
+            <td><?php echo $this->entries[$i]['id'] ?></td>
+            <td><?php echo $this->entries[$i]['email_com'] ?></td>
+            <td><?php echo $this->entries[$i]['comment'] ?></td>
+            <td><?php echo $this->entries[$i]['nombre'] ?></td>
+        </tr>
+       
+    <?php
+        } 
+    ?>
+</table>
+<!-- select id, comment, email_com , Cliente_idCliente, nombre from
+(select id, comment, email AS email_com, Cliente_idCliente from guestbook 
+join guestbook_has_cliente on guestbook.id=guestbook_has_cliente.guestbook_id) as tab
+join cliente on tab.Cliente_idCliente = cliente.idCliente -->
